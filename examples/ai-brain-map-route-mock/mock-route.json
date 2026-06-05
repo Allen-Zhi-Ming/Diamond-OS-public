@@ -1,0 +1,8 @@
+{
+  "routeId": "ai-brain-map-mock",
+  "path": "/workspace/brain-map/mock",
+  "module": "ai-brain-map",
+  "entry": "mock-brain-graph.json",
+  "shellPolicy": "route-module-only",
+  "dataPolicy": "mock-only"
+}
