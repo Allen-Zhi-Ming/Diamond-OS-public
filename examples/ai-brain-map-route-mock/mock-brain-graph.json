@@ -1,0 +1,32 @@
+{
+  "graphId": "demo-brain-graph-001",
+  "nodes": [
+    {
+      "id": "workspace-shell",
+      "label": "Workspace Shell",
+      "type": "shell"
+    },
+    {
+      "id": "route-module",
+      "label": "Route Module",
+      "type": "route"
+    },
+    {
+      "id": "brain-map-module",
+      "label": "Brain Map Module",
+      "type": "feature"
+    }
+  ],
+  "edges": [
+    {
+      "from": "workspace-shell",
+      "to": "route-module",
+      "relation": "mounts"
+    },
+    {
+      "from": "route-module",
+      "to": "brain-map-module",
+      "relation": "loads"
+    }
+  ]
+}
