@@ -4,9 +4,11 @@ on:
   pull_request:
     paths:
       - "**/*.md"
+      - "examples/ai-brain-map-route-mock/**"
   push:
     paths:
       - "**/*.md"
+      - "examples/ai-brain-map-route-mock/**"
 
 jobs:
   markdown-check:
@@ -25,3 +27,11 @@ jobs:
           test -f SECURITY.md
           test -f CONTRIBUTING.md
           test -f docs/project-summary.md
+          test -f examples/ai-brain-map-route-mock/README.md
+          test -f examples/ai-brain-map-route-mock/mock-route.json
+          test -f examples/ai-brain-map-route-mock/mock-brain-graph.json
+          test -f examples/ai-brain-map-route-mock/validate-mock.mjs
+
+      - name: Validate AI Brain Map route mock
+        run: |
+          node examples/ai-brain-map-route-mock/validate-mock.mjs
